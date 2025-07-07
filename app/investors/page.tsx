@@ -651,7 +651,7 @@ export default function InvestorsPage() {
             </div>
             <div className="text-right">
               <p className="mb-2 text-sm text-gray-400">
-                📧 anderson@cloudoptiq.com
+                📧 nasario@nasario.com.br
               </p>
               {/* <p className="text-sm text-gray-400">
                 🚀 Série Seed $2M • ROI 18x
