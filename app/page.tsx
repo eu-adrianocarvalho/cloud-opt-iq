@@ -12,8 +12,8 @@ export default function HomePage() {
   return (
     <main>
       {/* Navigation */}
-      <nav className="navbar">
-        <div className="nav-container">
+      <nav className="fixed top-0 left-0 right-0 glass border-b border-black/10 z-50 py-4">
+        <div className="max-w-6xl mx-auto px-6 flex justify-between items-center">
           <div className="nav-logo">
             <Image
               src="/cloud_opt_iq.svg"
@@ -23,109 +23,92 @@ export default function HomePage() {
               priority
             />
           </div>
-          <div className="nav-links">
-            <Link href="#problem">Problema</Link>
-            <Link href="#solution">Solução</Link>
-            <Link href="#benefits">Benefícios</Link>
-            <Link href="#roadmap">Roadmap</Link>
-            {/* <Link href="/investors" className="cta-button">
-              💎 Para Investidores
-            </Link> */}
+          <div className="flex gap-8 items-center">
+            <Link
+              href="#problem"
+              className="text-gray-700 font-medium hover:text-blue-600 transition-colors"
+            >
+              Problema
+            </Link>
+            <Link
+              href="#solution"
+              className="text-gray-700 font-medium hover:text-blue-600 transition-colors"
+            >
+              Solução
+            </Link>
+            <Link
+              href="#benefits"
+              className="text-gray-700 font-medium hover:text-blue-600 transition-colors"
+            >
+              Benefícios
+            </Link>
+            <Link
+              href="#roadmap"
+              className="text-gray-700 font-medium hover:text-blue-600 transition-colors"
+            >
+              Roadmap
+            </Link>
+            <Link
+              href="/investors"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-emerald-500 to-emerald-600 text-white font-semibold rounded-lg shadow-lg shadow-emerald-500/40 hover-scale"
+            >
+              🎯 Para Investidores
+            </Link>
           </div>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section className="hero">
-        <div className="container">
-          <div className="hero-content">
-            <div className="hero-badge">
+      <section className="hero-gradient text-white pt-30 pb-20">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="relative z-10 text-center">
+            <div className="inline-block bg-white/20 text-white px-5 py-2 rounded-full text-sm font-semibold mb-6 border border-white/30">
               🚀 Série Seed $2M • ROI Projetado 18x
             </div>
-            <h1 className="hero-title">
-              Transforme <span className="gradient-text">Cloud Costs</span>
+            <h1 className="text-5xl md:text-6xl font-extrabold leading-tight mb-6">
+              Transforme <span className="text-gradient">Cloud Costs</span>
               <br />
               em Vantagem Competitiva
             </h1>
-            <p className="hero-subtitle">
+            <p className="text-xl mb-10 opacity-95 max-w-4xl mx-auto">
               <strong>CloudOptIQ</strong> é a plataforma FinOps com IA que{" "}
               <strong>garante 40% de redução</strong>
               em custos cloud. Implementação em <strong>2 semanas</strong>, ROI
               em <strong>3 meses</strong>. Tecnologia proprietária que
               automatiza otimizações impossíveis manualmente.
             </p>
-            <div className="hero-cta">
-              <Link href="#" className="primary-button large">
+            <div className="flex gap-5 justify-center flex-wrap mt-10">
+              <Link
+                href="/investors"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold rounded-lg text-lg shadow-lg shadow-blue-600/40 hover-scale"
+              >
                 🎯 Oportunidade de Investimento
               </Link>
-              <Link href="#solution" className="secondary-button large">
+              <Link
+                href="#solution"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-white/20 text-white font-semibold rounded-lg text-lg border border-white/30 hover:bg-white/30 hover-scale"
+              >
                 🚀 Ver Como Funciona
               </Link>
             </div>
 
             {/* Métricas de Impacto */}
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
-                gap: "32px",
-                marginTop: "60px",
-                textAlign: "center",
-              }}
-            >
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-15 text-center">
               <div>
-                <div
-                  style={{
-                    fontSize: "36px",
-                    fontWeight: "800",
-                    marginBottom: "8px",
-                  }}
-                >
-                  30%
-                </div>
-                <div style={{ opacity: "0.9" }}>
-                  Redução de Custos Garantida
-                </div>
+                <div className="text-4xl font-extrabold mb-2">40%</div>
+                <div className="opacity-90">Redução Garantida</div>
               </div>
               <div>
-                <div
-                  style={{
-                    fontSize: "36px",
-                    fontWeight: "800",
-                    marginBottom: "8px",
-                  }}
-                >
-                  2 semanas
-                </div>
-                <div style={{ opacity: "0.9" }}>Implementação</div>
+                <div className="text-4xl font-extrabold mb-2">2 semanas</div>
+                <div className="opacity-90">Implementação</div>
               </div>
               <div>
-                <div
-                  style={{
-                    fontSize: "36px",
-                    fontWeight: "800",
-                    marginBottom: "8px",
-                  }}
-                >
-                  3 meses
-                </div>
-                <div style={{ opacity: "0.9" }}>
-                  Return Over Investiment (ROI)
-                </div>
+                <div className="text-4xl font-extrabold mb-2">3 meses</div>
+                <div className="opacity-90">ROI Comprovado</div>
               </div>
               <div>
-                <div
-                  style={{
-                    fontSize: "36px",
-                    fontWeight: "800",
-                    marginBottom: "8px",
-                  }}
-                >
-                  $76B
-                </div>
-                <div style={{ opacity: "0.9" }}>
-                  Total Addressable Market (TAM)
-                </div>
+                <div className="text-4xl font-extrabold mb-2">$76B</div>
+                <div className="opacity-90">Mercado Total</div>
               </div>
             </div>
           </div>
@@ -133,74 +116,48 @@ export default function HomePage() {
       </section>
 
       {/* Problem Section */}
-      <section
-        id="problem"
-        className="section"
-        style={{ background: "#f8fafc" }}
-      >
-        <div className="container">
-          <div className="section-header">
-            <h2>💸 O Problema que Resolvemos</h2>
-            <p>
+      <section id="problem" className="py-25 bg-slate-50">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-5xl font-bold mb-5 text-gray-900">
+              💸 O Problema que Resolvemos
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Empresas desperdiçam bilhões em cloud por falta de visibilidade e
               otimização inteligente
             </p>
           </div>
 
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-              gap: "32px",
-            }}
-          >
-            <div className="card">
-              <div style={{ fontSize: "48px", marginBottom: "20px" }}>📊</div>
-              <h3
-                style={{
-                  fontSize: "20px",
-                  fontWeight: "600",
-                  marginBottom: "16px",
-                }}
-              >
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white p-8 rounded-2xl shadow-lg hover-lift">
+              <div className="text-5xl mb-5">📊</div>
+              <h3 className="text-xl font-semibold mb-4">
                 Falta de Visibilidade
               </h3>
-              <p style={{ color: "#4a5568", lineHeight: "1.6" }}>
+              <p className="text-gray-600 leading-relaxed">
                 <strong>89% das empresas</strong> não sabem onde estão gastando
                 em cloud. Dashboards nativos são limitados e não oferecem
                 insights acionáveis.
               </p>
             </div>
 
-            <div className="card">
-              <div style={{ fontSize: "48px", marginBottom: "20px" }}>⚡</div>
-              <h3
-                style={{
-                  fontSize: "20px",
-                  fontWeight: "600",
-                  marginBottom: "16px",
-                }}
-              >
+            <div className="bg-white p-8 rounded-2xl shadow-lg hover-lift">
+              <div className="text-5xl mb-5">⚡</div>
+              <h3 className="text-xl font-semibold mb-4">
                 Otimização Manual Impossível
               </h3>
-              <p style={{ color: "#4a5568", lineHeight: "1.6" }}>
+              <p className="text-gray-600 leading-relaxed">
                 <strong>Milhares de recursos</strong> ativos 24/7. Identificar e
                 otimizar manualmente leva meses e requer especialistas caros.
               </p>
             </div>
 
-            <div className="card">
-              <div style={{ fontSize: "48px", marginBottom: "20px" }}>💰</div>
-              <h3
-                style={{
-                  fontSize: "20px",
-                  fontWeight: "600",
-                  marginBottom: "16px",
-                }}
-              >
+            <div className="bg-white p-8 rounded-2xl shadow-lg hover-lift">
+              <div className="text-5xl mb-5">💰</div>
+              <h3 className="text-xl font-semibold mb-4">
                 Desperdício Crescente
               </h3>
-              <p style={{ color: "#4a5568", lineHeight: "1.6" }}>
+              <p className="text-gray-600 leading-relaxed">
                 <strong>35% de desperdício médio</strong> em contas cloud. Para
                 uma empresa que gasta $1M/ano, são $350k jogados fora.
               </p>
@@ -208,81 +165,26 @@ export default function HomePage() {
           </div>
 
           {/* Estatísticas de Mercado */}
-          <div
-            style={{
-              background: "white",
-              padding: "40px",
-              borderRadius: "16px",
-              marginTop: "60px",
-              textAlign: "center",
-              border: "1px solid #e5e7eb",
-            }}
-          >
-            <h3
-              style={{
-                fontSize: "24px",
-                fontWeight: "600",
-                marginBottom: "30px",
-              }}
-            >
+          <div className="bg-white p-10 rounded-2xl mt-15 text-center border border-gray-200">
+            <h3 className="text-2xl font-semibold mb-8">
               📈 Oportunidade de Mercado
             </h3>
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
-                gap: "32px",
-              }}
-            >
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               <div>
-                <div
-                  style={{
-                    fontSize: "32px",
-                    fontWeight: "700",
-                    color: "#3b82f6",
-                  }}
-                >
-                  $678B
-                </div>
-                <div style={{ color: "#6b7280" }}>
-                  Gasto Global Cloud (2024)
-                </div>
+                <div className="text-3xl font-bold text-blue-600">$678B</div>
+                <div className="text-gray-500">Gasto Global Cloud (2024)</div>
               </div>
               <div>
-                <div
-                  style={{
-                    fontSize: "32px",
-                    fontWeight: "700",
-                    color: "#10b981",
-                  }}
-                >
-                  25%
-                </div>
-                <div style={{ color: "#6b7280" }}>Crescimento Anual FinOps</div>
+                <div className="text-3xl font-bold text-emerald-600">25%</div>
+                <div className="text-gray-500">Crescimento Anual FinOps</div>
               </div>
               <div>
-                <div
-                  style={{
-                    fontSize: "32px",
-                    fontWeight: "700",
-                    color: "#f59e0b",
-                  }}
-                >
-                  $76B
-                </div>
-                <div style={{ color: "#6b7280" }}>Mercado Endereçável</div>
+                <div className="text-3xl font-bold text-yellow-600">$76B</div>
+                <div className="text-gray-500">Mercado Endereçável</div>
               </div>
               <div>
-                <div
-                  style={{
-                    fontSize: "32px",
-                    fontWeight: "700",
-                    color: "#8b5cf6",
-                  }}
-                >
-                  98%
-                </div>
-                <div style={{ color: "#6b7280" }}>Empresas Sem FinOps</div>
+                <div className="text-3xl font-bold text-purple-600">98%</div>
+                <div className="text-gray-500">Empresas Sem FinOps</div>
               </div>
             </div>
           </div>
@@ -290,136 +192,105 @@ export default function HomePage() {
       </section>
 
       {/* Solution Section */}
-      <section id="solution" className="section">
-        <div className="container">
-          <div className="section-header">
-            <h2>🤖 Nossa Solução Proprietária</h2>
-            <p>
+      <section id="solution" className="py-25">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-5xl font-bold mb-5 text-gray-900">
+              🤖 Nossa Solução Proprietária
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               IA avançada que automatiza otimizações cloud impossíveis de fazer
               manualmente
             </p>
           </div>
 
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(350px, 1fr))",
-              gap: "40px",
-            }}
-          >
+          <div className="grid lg:grid-cols-2 gap-10">
             <div>
-              <h3
-                style={{
-                  fontSize: "24px",
-                  fontWeight: "600",
-                  marginBottom: "20px",
-                  color: "#1a1a1a",
-                }}
-              >
+              <h3 className="text-2xl font-semibold mb-5 text-gray-900">
                 🎯 Como Funciona
               </h3>
-              <ul
-                style={{ listStyle: "none", color: "#4a5568", lineHeight: "2" }}
-              >
-                <li>
-                  ✅ <strong>Conexão Automática:</strong> Integra com AWS,
-                  Azure, GCP em minutos
+              <ul className="space-y-4 text-gray-600">
+                <li className="flex items-start gap-3">
+                  <span className="text-green-500 font-bold">✅</span>
+                  <span>
+                    <strong>Conexão Automática:</strong> Integra com AWS, Azure,
+                    GCP em minutos
+                  </span>
                 </li>
-                <li>
-                  ✅ <strong>Análise em Tempo Real:</strong> IA processa milhões
-                  de métricas simultaneamente
+                <li className="flex items-start gap-3">
+                  <span className="text-green-500 font-bold">✅</span>
+                  <span>
+                    <strong>Análise em Tempo Real:</strong> IA processa milhões
+                    de métricas simultaneamente
+                  </span>
                 </li>
-                <li>
-                  ✅ <strong>Otimizações Inteligentes:</strong> Algoritmos
-                  proprietários identificam economias
+                <li className="flex items-start gap-3">
+                  <span className="text-green-500 font-bold">✅</span>
+                  <span>
+                    <strong>Otimizações Inteligentes:</strong> Algoritmos
+                    proprietários identificam economias
+                  </span>
                 </li>
-                <li>
-                  ✅ <strong>Implementação Automática:</strong> Aplica
-                  otimizações com aprovação
+                <li className="flex items-start gap-3">
+                  <span className="text-green-500 font-bold">✅</span>
+                  <span>
+                    <strong>Implementação Automática:</strong> Aplica
+                    otimizações com aprovação
+                  </span>
                 </li>
-                <li>
-                  ✅ <strong>Monitoramento Contínuo:</strong> Garante
-                  performance e economia
+                <li className="flex items-start gap-3">
+                  <span className="text-green-500 font-bold">✅</span>
+                  <span>
+                    <strong>Monitoramento Contínuo:</strong> Garante performance
+                    e economia
+                  </span>
                 </li>
-                <li>
-                  ✅ <strong>Relatórios Executivos:</strong> ROI e economia em
-                  tempo real
+                <li className="flex items-start gap-3">
+                  <span className="text-green-500 font-bold">✅</span>
+                  <span>
+                    <strong>Relatórios Executivos:</strong> ROI e economia em
+                    tempo real
+                  </span>
                 </li>
               </ul>
             </div>
 
-            <div
-              style={{
-                background: "#f8fafc",
-                padding: "40px",
-                borderRadius: "16px",
-                border: "1px solid #e5e7eb",
-              }}
-            >
-              <h4
-                style={{
-                  fontSize: "20px",
-                  fontWeight: "600",
-                  marginBottom: "20px",
-                  textAlign: "center",
-                }}
-              >
+            <div className="bg-slate-50 p-10 rounded-2xl border border-gray-200">
+              <h4 className="text-xl font-semibold mb-5 text-center">
                 💡 Diferenciais Técnicos
               </h4>
-              <div style={{ marginBottom: "20px" }}>
-                <div
-                  style={{
-                    fontSize: "18px",
-                    fontWeight: "600",
-                    marginBottom: "8px",
-                  }}
-                >
-                  🚀 Backend em Rust
+              <div className="space-y-5">
+                <div>
+                  <div className="text-lg font-semibold mb-2">
+                    🚀 Backend em Rust
+                  </div>
+                  <div className="text-sm text-gray-600">
+                    Performance 10x superior, processamento em microssegundos
+                  </div>
                 </div>
-                <div style={{ fontSize: "14px", color: "#6b7280" }}>
-                  Performance 10x superior, processamento em microssegundos
+                <div>
+                  <div className="text-lg font-semibold mb-2">
+                    🧠 IA Proprietária
+                  </div>
+                  <div className="text-sm text-gray-600">
+                    Algoritmos únicos de otimização multi-cloud
+                  </div>
                 </div>
-              </div>
-              <div style={{ marginBottom: "20px" }}>
-                <div
-                  style={{
-                    fontSize: "18px",
-                    fontWeight: "600",
-                    marginBottom: "8px",
-                  }}
-                >
-                  🧠 IA Proprietária
+                <div>
+                  <div className="text-lg font-semibold mb-2">
+                    🔒 Enterprise Security
+                  </div>
+                  <div className="text-sm text-gray-600">
+                    SOC2, ISO27001, zero acesso aos dados sensíveis
+                  </div>
                 </div>
-                <div style={{ fontSize: "14px", color: "#6b7280" }}>
-                  Algoritmos únicos de otimização multi-cloud
-                </div>
-              </div>
-              <div style={{ marginBottom: "20px" }}>
-                <div
-                  style={{
-                    fontSize: "18px",
-                    fontWeight: "600",
-                    marginBottom: "8px",
-                  }}
-                >
-                  🔒 Enterprise Security
-                </div>
-                <div style={{ fontSize: "14px", color: "#6b7280" }}>
-                  SOC2, ISO27001, zero acesso aos dados sensíveis
-                </div>
-              </div>
-              <div>
-                <div
-                  style={{
-                    fontSize: "18px",
-                    fontWeight: "600",
-                    marginBottom: "8px",
-                  }}
-                >
-                  ⚡ Implementação Rápida
-                </div>
-                <div style={{ fontSize: "14px", color: "#6b7280" }}>
-                  2 semanas vs 6 meses dos concorrentes
+                <div>
+                  <div className="text-lg font-semibold mb-2">
+                    ⚡ Implementação Rápida
+                  </div>
+                  <div className="text-sm text-gray-600">
+                    2 semanas vs 6 meses dos concorrentes
+                  </div>
                 </div>
               </div>
             </div>
@@ -428,24 +299,18 @@ export default function HomePage() {
       </section>
 
       {/* Benefits Section */}
-      <section
-        id="benefits"
-        className="section"
-        style={{ background: "#f8fafc" }}
-      >
-        <div className="container">
-          <div className="section-header">
-            <h2>🎯 Benefícios Garantidos</h2>
-            <p>Resultados mensuráveis desde o primeiro mês de implementação</p>
+      <section id="benefits" className="py-25 bg-slate-50">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-5xl font-bold mb-5 text-gray-900">
+              🎯 Benefícios Garantidos
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Resultados mensuráveis desde o primeiro mês de implementação
+            </p>
           </div>
 
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
-              gap: "32px",
-            }}
-          >
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
                 icon: "💰",
@@ -478,22 +343,13 @@ export default function HomePage() {
                 desc: "Conformidade SOC2/ISO27001, auditoria completa disponível",
               },
             ].map((benefit, index) => (
-              <div key={index} className="card" style={{ textAlign: "center" }}>
-                <div style={{ fontSize: "48px", marginBottom: "20px" }}>
-                  {benefit.icon}
-                </div>
-                <h3
-                  style={{
-                    fontSize: "18px",
-                    fontWeight: "600",
-                    marginBottom: "12px",
-                  }}
-                >
-                  {benefit.title}
-                </h3>
-                <p style={{ color: "#4a5568", lineHeight: "1.6" }}>
-                  {benefit.desc}
-                </p>
+              <div
+                key={index}
+                className="bg-white p-8 rounded-2xl shadow-lg text-center hover-lift"
+              >
+                <div className="text-5xl mb-5">{benefit.icon}</div>
+                <h3 className="text-lg font-semibold mb-3">{benefit.title}</h3>
+                <p className="text-gray-600 leading-relaxed">{benefit.desc}</p>
               </div>
             ))}
           </div>
@@ -501,20 +357,18 @@ export default function HomePage() {
       </section>
 
       {/* Roadmap Section */}
-      <section id="roadmap" className="section">
-        <div className="container">
-          <div className="section-header">
-            <h2>🗺️ Roadmap de Implementação</h2>
-            <p>Processo estruturado que garante sucesso e ROI rápido</p>
+      <section id="roadmap" className="py-25">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-5xl font-bold mb-5 text-gray-900">
+              🗺️ Roadmap de Implementação
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Processo estruturado que garante sucesso e ROI rápido
+            </p>
           </div>
 
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-              gap: "32px",
-            }}
-          >
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
                 phase: "Semana 1-2",
@@ -557,34 +411,19 @@ export default function HomePage() {
                 ],
               },
             ].map((phase, index) => (
-              <div key={index} className="card">
-                <div
-                  style={{
-                    background: "linear-gradient(135deg, #3b82f6, #1d4ed8)",
-                    color: "white",
-                    padding: "8px 16px",
-                    borderRadius: "20px",
-                    fontSize: "14px",
-                    fontWeight: "600",
-                    display: "inline-block",
-                    marginBottom: "16px",
-                  }}
-                >
+              <div
+                key={index}
+                className="bg-white p-8 rounded-2xl shadow-lg hover-lift"
+              >
+                <div className="inline-block bg-gradient-to-r from-blue-600 to-blue-700 text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
                   {phase.phase}
                 </div>
-                <h3
-                  style={{
-                    fontSize: "20px",
-                    fontWeight: "600",
-                    marginBottom: "16px",
-                  }}
-                >
-                  {phase.title}
-                </h3>
-                <ul style={{ listStyle: "none", color: "#4a5568" }}>
+                <h3 className="text-xl font-semibold mb-4">{phase.title}</h3>
+                <ul className="space-y-2 text-gray-600">
                   {phase.items.map((item, itemIndex) => (
-                    <li key={itemIndex} style={{ marginBottom: "8px" }}>
-                      ✅ {item}
+                    <li key={itemIndex} className="flex items-start gap-2">
+                      <span className="text-green-500 font-bold">✅</span>
+                      <span className="text-sm">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -595,88 +434,101 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      {/* <section className="section" style={{
-        background: 'linear-gradient(135deg, #10b981, #059669)',
-        color: 'white',
-        textAlign: 'center'
-      }}>
-        <div className="container">
-          <h2 style={{fontSize: '42px', fontWeight: '700', marginBottom: '20px'}}>
+      {/* <section className="py-25 bg-gradient-to-r from-emerald-600 to-emerald-700 text-white text-center">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="text-4xl md:text-5xl font-bold mb-5">
             🚀 Ready to Transform Your Cloud Costs?
           </h2>
-          <p style={{fontSize: '20px', marginBottom: '40px', opacity: '0.95'}}>
+          <p className="text-xl mb-10 opacity-95 max-w-3xl mx-auto">
             Junte-se às empresas que já <strong>economizam milhões</strong> com CloudOptIQ. 
             <br />Implementação gratuita para early adopters qualificados.
           </p>
           
-          <div style={{
-            display: 'flex',
-            gap: '20px',
-            justifyContent: 'center',
-            flexWrap: 'wrap',
-            marginBottom: '50px'
-          }}>
-            <Link href="/investors" className="primary-button large">
+          <div className="flex gap-5 justify-center flex-wrap mb-12">
+            <Link href="/investors" className="inline-flex items-center gap-2 px-8 py-4 bg-white text-emerald-600 font-semibold rounded-lg text-lg shadow-lg hover-scale">
               💎 Oportunidade de Investimento
             </Link>
             <a 
               href="mailto:anderson@cloudoptiq.com?subject=Demo%20CloudOptIQ&body=Olá,%0A%0AGostaria%20de%20agendar%20uma%20demo%20da%20CloudOptIQ%20para:%0A%0A-%20Empresa:%0A-%20Gasto%20mensal%20cloud:%0A-%20Principal%20provedor:%20(AWS/Azure/GCP)%0A-%20Melhor%20horário:%0A%0AObrigado!" 
-              className="secondary-button large"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-white/20 text-white font-semibold rounded-lg text-lg border border-white/30 hover:bg-white/30 hover-scale"
             >
               📅 Agendar Demo Gratuita
             </a>
           </div>
           
-          <div style={{
-            background: 'rgba(255, 255, 255, 0.1)',
-            backdropFilter: 'blur(10px)',
-            padding: '30px',
-            borderRadius: '16px',
-            border: '1px solid rgba(255, 255, 255, 0.2)'
-          }}>
-            <h4 style={{marginBottom: '20px', fontSize: '18px', fontWeight: '600'}}>
+          <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20 max-w-4xl mx-auto">
+            <h4 className="mb-5 text-lg font-semibold">
               🎯 Garantias para Early Adopters
             </h4>
-            <div style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-              gap: '20px',
-              fontSize: '14px'
-            }}>
-              <div>✅ Implementação gratuita</div>
-              <div>✅ 40% economia garantida</div>
-              <div>✅ ROI em 90 dias</div>
-              <div>✅ Suporte premium 24/7</div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-5 text-sm">
+              <div className="flex items-center gap-2">
+                <span className="text-green-400">✅</span>
+                <span>Implementação gratuita</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-green-400">✅</span>
+                <span>40% economia garantida</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-green-400">✅</span>
+                <span>ROI em 90 dias</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-green-400">✅</span>
+                <span>Suporte premium 24/7</span>
+              </div>
             </div>
           </div>
         </div>
       </section> */}
 
       {/* Footer */}
-      <footer className="footer">
-        <div className="container">
-          <div className="footer-content">
-            <div className="footer-logo">
+      <footer className="bg-gray-900 text-white py-15">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid md:grid-cols-3 gap-10 mb-10">
+            <div>
               <Image
-                src="/CloudOptIQ_01_blue.svg"
+                src="/cloud_opt_iq.svg"
                 alt="CloudOptIQ"
                 width={150}
                 height={32}
-                style={{ filter: "brightness(0) invert(1)" }}
+                className="brightness-0 invert"
               />
             </div>
-            <div className="footer-links">
-              <Link href="/">Home</Link>
-              <Link href="/investors">Investidores</Link>
-              <Link href="#solution">Solução</Link>
-              {/* <a href="mailto:anderson@cloudoptiq.com">Contato</a> */}
+            <div className="flex gap-8 justify-center">
+              <Link
+                href="/"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                Home
+              </Link>
+              <Link
+                href="/investors"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                Investidores
+              </Link>
+              <Link
+                href="#solution"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                Solução
+              </Link>
+              <a
+                href="mailto:anderson@cloudoptiq.com"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                Contato
+              </a>
             </div>
-            <div className="footer-contact">
-              <p>📧 anderson@cloudoptiq.com</p>
-              {/* <p>🚀 Série Seed $2M • ROI 18x</p> */}
+            <div className="text-right">
+              <p className="mb-2 text-sm text-gray-400">
+                📧 anderson@cloudoptiq.com
+              </p>
+              {/* <p className="text-sm text-gray-400">🚀 Série Seed $2M • ROI 18x</p> */}
             </div>
           </div>
-          <div className="footer-bottom">
+          <div className="text-center pt-8 border-t border-gray-700 text-gray-500 text-sm">
             <p>&copy; 2025 CloudOptIQ. All rights reserved.</p>
           </div>
         </div>

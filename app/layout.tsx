@@ -5,30 +5,34 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'CloudOptIQ - Transforme Cloud Costs em Vantagem Competitiva',
-  description: 'Plataforma FinOps com IA que garante 40% de redução em custos cloud. Implementação em 2 semanas, ROI em 3 meses. Captação Série Seed $2M.',
-  keywords: 'FinOps, Cloud Optimization, Cost Management, AWS, Azure, Google Cloud, AI, Machine Learning',
+  title: "CloudOptIQ - Transforme Cloud Costs em Vantagem Competitiva",
+  description:
+    "Plataforma FinOps com IA que garante 40% de redução em custos cloud. Implementação em 2 semanas, ROI em 3 meses. Captação Série Seed $2M.",
+  keywords:
+    "FinOps, Cloud Optimization, Cost Management, AWS, Azure, Google Cloud, AI, Machine Learning",
   openGraph: {
-    title: 'CloudOptIQ - A Revolução FinOps com IA',
-    description: 'Reduza 40% dos custos cloud com nossa plataforma proprietária. Série Seed $2M - ROI 18x em 5 anos.',
-    url: 'https://cloudoptiq.com',
-    siteName: 'CloudOptIQ',
+    title: "CloudOptIQ - A Revolução FinOps com IA",
+    description:
+      "Reduza 40% dos custos cloud com nossa plataforma proprietária. Série Seed $2M - ROI 18x em 5 anos.",
+    url: "https://cloudoptiq.com",
+    siteName: "CloudOptIQ",
     images: [
       {
-        url: '/CloudOptIQ_01_blue.svg',
+        url: "/cloud_opt_iq.svg",
         width: 1200,
         height: 630,
-        alt: 'CloudOptIQ - FinOps Platform',
+        alt: "CloudOptIQ - FinOps Platform",
       },
     ],
-    locale: 'pt_BR',
-    type: 'website',
+    locale: "pt_BR",
+    type: "website",
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'CloudOptIQ - A Revolução FinOps com IA',
-    description: 'Reduza 40% dos custos cloud com nossa plataforma proprietária.',
-    images: ['/CloudOptIQ_01_blue.svg'],
+    card: "summary_large_image",
+    title: "CloudOptIQ - A Revolução FinOps com IA",
+    description:
+      "Reduza 40% dos custos cloud com nossa plataforma proprietária.",
+    images: ["/cloud_opt_iq.svg"],
   },
   robots: {
     index: true,
@@ -36,12 +40,12 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
-}
+};
 
 export default function RootLayout({
   children,
